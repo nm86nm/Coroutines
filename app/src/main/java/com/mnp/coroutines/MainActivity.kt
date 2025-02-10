@@ -23,8 +23,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             CoroutinesTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    HelloWorld()
+                Scaffold(modifier = Modifier.fillMaxSize()) {innerPadding ->
+                    
                 }
             }
         }
@@ -32,12 +32,16 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun HelloWorld() = runBlocking {
+fun HelloWorld(){
+    Text("Hello World!")
+}
+
+fun helloWorld() = runBlocking {
     launch {
         delay(1000L)
         Log.i("TAG", "World!")
     }
-    Log.i("TAG", "Hello,")
+    Log.i("TAG", "Hello, (Coroutine)")
     delay(2000L)
 }
 
