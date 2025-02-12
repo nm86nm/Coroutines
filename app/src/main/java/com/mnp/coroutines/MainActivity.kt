@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CoroutinesTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) {innerPadding ->
-                    
+                    helloWorld()
                 }
             }
         }
